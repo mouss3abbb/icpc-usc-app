@@ -15,5 +15,6 @@ class LevelZeroActivity : AppCompatActivity() {
         binding.levelZeroTopics.adapter = LevelZeroAdapter()
         binding.levelZeroTopics.setHasFixedSize(true)
         binding.levelZeroTopics.layoutManager = LinearLayoutManager(this)
+
     }
 }
