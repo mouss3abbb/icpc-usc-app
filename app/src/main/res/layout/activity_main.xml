@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/background_ui"
+            android:id="@+id/main_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/level0_button"
+            app:layout_constraintStart_toStartOf="@id/main_bg"
+            app:layout_constraintEnd_toEndOf="@id/main_bg"
+            app:layout_constraintTop_toBottomOf="@id/main_bg"
+            app:cardCornerRadius="15dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/level_0_ui_1_"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level 0"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?attr/textAppearanceHeadline4"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="16dp"
+                    tools:ignore="RtlCompat" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/level1_button"
+            app:layout_constraintStart_toStartOf="@id/main_bg"
+            app:layout_constraintEnd_toEndOf="@id/main_bg"
+            app:layout_constraintTop_toBottomOf="@id/level0_button"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="12dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/level_1_ui_1_"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level 1"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?attr/textAppearanceHeadline4"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="16dp"
+                    tools:ignore="RtlCompat" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/slideshow"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/main_bg"
+            app:layout_constraintEnd_toEndOf="@id/main_bg"
+            app:layout_constraintTop_toBottomOf="@id/level1_button"
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/slideshow_image"
+            tools:itemCount="5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
